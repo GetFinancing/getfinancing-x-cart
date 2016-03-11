@@ -1,0 +1,33 @@
+# vim: set ts=2 sw=2 sts=2 et:
+#
+# Fixtures
+#
+# @author    Albert Fatsini <afatsini@GetFinancing.com>
+# @copyright Copyright (c) 2015-2016 GetFinancing. All rights reserved
+# @license   http://www.x-cart.com/license-agreement.html X-Cart 5 License Agreement
+# @link      http://www.x-cart.com/
+
+XLite\Model\Payment\Method:
+  - service_name: GetFinancing
+    class: Module\GetFinancing\GetFinancing\Model\Payment\Processor\GetFinancing
+    type: C
+    orderby: -101000
+    countries: [AD, NL, US, AT, AU, BE, BG, CA, CG, CF, CH, CY, CZ, DE, DK, DO, IR, ES, FI, GB, FR, GR, HU, IE, IT, GI, KR, LI, MC, MD, MT, NL, NO, LU, PL, PT, RO, SE, SI, SK, SM, SY, TZ, VA]
+    translations:
+      - code: en
+        name: GetFinancing
+    settings:
+      - name: username
+      - name: merchant_id
+      - name: password
+      - name: test
+        value: 1
+
+XLite\Model\LanguageLabel:
+  - { name: "Username", translations: [{ code: en, label: "Username" }] }
+  - { name: "Merchant Id", translations: [{ code: en, label: "Merchant Id" }] }
+  - { name: "Password", translations: [{ code: en, label: "Password" }] }
+  - { name: "Test/Live mode", translations: [{ code: en, label: "Test/Live mode" }] }
+  - { name: "GetFinancing Backoffice Login", translations: [{ code: en, label: "GetFinancing Backoffice Login" }] }
+  - { name: "Documentation", translations: [{ code: en, label: "Documentation" }] }
+  - { name: "Get Financing", translations: [{ code: en, label: "Now your clients can pay orders using Get Financing!" }] }
