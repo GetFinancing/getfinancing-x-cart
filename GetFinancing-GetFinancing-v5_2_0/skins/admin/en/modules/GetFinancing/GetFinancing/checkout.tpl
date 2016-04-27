@@ -12,7 +12,7 @@
 
 <script>
         var script = document.createElement('script');
-        script.src = "https://partner.getfinancing.com/libs/1.0/getfinancing.js";
+        script.src = "https://cdn.getfinancing.com/libs/1.0/getfinancing.js";
         setTimeout(function(){
         document.body.appendChild(script);
         },2000);  // 2000 is the delay in milliseconds

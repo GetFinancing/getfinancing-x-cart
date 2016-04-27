@@ -56,7 +56,7 @@ class Config extends \XLite\View\AView
     {
         $list = parent::getJSFiles();
 
-        $list[] = 'https://partner.getfinancing.com/libs/1.0/getfinancing.js';
+        $list[] = 'https://cdn.getfinancing.com/libs/1.0/getfinancing.js';
 
         return $list;
     }
