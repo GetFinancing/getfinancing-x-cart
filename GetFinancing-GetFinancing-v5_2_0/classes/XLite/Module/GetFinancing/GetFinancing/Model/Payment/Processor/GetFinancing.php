@@ -219,9 +219,13 @@ class GetFinancing extends \XLite\Model\Payment\Base\WebBased
             ),
             'version'          => '1.9',
             'email'            => $this->getProfile()->getLogin(),
+            'phone'            => $this->getProfile()->getBillingAddress()->getPhone(),
             'merchant_loan_id' => $merchant_loan_id,
-            'success_url' => $this->getReturnURL(null, true),
-            'failure_url' => $this->getPaymentReturnURL('decline')
+            'success_url' => $ok_url,
+            'failure_url' => $nok_url,
+            'postback_url' => $callback_url,
+            'software_name' => 'x-cart',
+            'software_version' => 'xcart 5'
         );
 
         $body_json_data = json_encode($gf_data);
