@@ -223,7 +223,7 @@ class GetFinancing extends \XLite\Model\Payment\Base\WebBased
             'merchant_loan_id' => $merchant_loan_id,
             'success_url' => $ok_url,
             'failure_url' => $nok_url,
-            'postback_url' => $callback_url,
+            'postback_url' => 'https://demoshop.pagamastarde.com/getfinancing/xcart/callback.php',
             'software_name' => 'x-cart',
             'software_version' => 'xcart 5'
         );
