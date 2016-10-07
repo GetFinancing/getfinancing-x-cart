@@ -206,10 +206,10 @@ class GetFinancing extends \XLite\Model\Payment\Base\WebBased
             'first_name'       => $this->getProfile()->getBillingAddress()->getFirstname(),
             'last_name'        => $this->getProfile()->getBillingAddress()->getLastname(),
             'shipping_address' => array(
-                'street1'  => $this->getProfile()->getBillingAddress()->getStreet(),
-                'city'    => $this->getProfile()->getBillingAddress()->getCity(),
-                'state'   => $this->getProfile()->getBillingAddress()->getState()->getCode(),
-                'zipcode' => $this->getProfile()->getBillingAddress()->getZipcode()
+                'street1'  => $this->getProfile()->getShippingAddress()->getStreet(),
+                'city'    => $this->getProfile()->getShippingAddress()->getCity(),
+                'state'   => $this->getProfile()->getShippingAddress()->getState()->getCode(),
+                'zipcode' => $this->getProfile()->getShippingAddress()->getZipcode()
             ),
             'billing_address' => array(
                 'street1'  => $this->getProfile()->getBillingAddress()->getStreet(),
